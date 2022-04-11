@@ -1,20 +1,13 @@
 {
-  "name": "black_jack",
-  "version": "1.0.0",
-  "description": "This is a Javascript library to play Black Jack.",
-  "main": "main.js",
+  "name": "blackjack",
+  "private": true,
+  "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/LopezPedrosaAlex/BlackJack.git"
-  },
-  "author": "Alex López Pedrosa",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/LopezPedrosaAlex/BlackJack/issues"
-  },
-  "homepage": "https://github.com/LopezPedrosaAlex/BlackJack#readme"
-}
+  "devDependencies": {
+    "vite": "^2.9.0"
+  }
