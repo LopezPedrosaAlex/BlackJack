@@ -2,7 +2,42 @@
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+}
+
+#score {
+  width: 100vw;
+  height: auto;
+  font-size: 10em;
+  text-align: center;
+  align-self: center;
+}
+
+#players {
+  display: flex;
+  flex-direction: column;
+  margin: 2em 0 2em 2em;
+}
+
+#dealer, #player {
+  height: 20em;
+  border: 1px solid gray;
+  width: 20em;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  margin: 1em 0 0 1em;
+  padding: 1em 0 1em 0;
+  
+}
+
+#playerScore, #dealerScore {
+  width: 20em;
+  height: 20em;
+  text-align: center;
+  vertical-align: center;
 }

@@ -2,12 +2,36 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="https://cdn-icons-png.flaticon.com/512/1983/1983636.png"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>BlackJack</title>
+    <script type="module" src="./main.js"></script>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
+    <div id="app" onload="start()">
+      <div id="players">
+        <div id="dealer">
+          <h3 id="dealerScore"></h3>
+          <div id="dealerCards"></div>
+          <div id="actions">
+            <p>DEALER</p>
+          </div>
+        </div>
+        <div id="player">
+          <h3 id="playerScore"></h3>
+          <div id="playerCards"></div>
+          <div id="actions">
+            <button name="button" id="playerNewCard">New Card</button>
+            <button name="button" id="playerStands">Stand</button>
+          </div>
+        </div>
+      </div>
+      <div id="score"><h1></h1></div>
+    </div>
   </body>
 </html>

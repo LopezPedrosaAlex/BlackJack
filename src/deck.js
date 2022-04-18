@@ -4,13 +4,12 @@ const VALUES = ["A", "2", "3", "4", "5", "6", "7",
 
 export class Deck {
     constructor() {
-        this.cards = createDeck();
+        this.cards = this.createDeck();
     }
 
     get numberOfCards() {
         return this.cards.length;
     }
-
 
     shuffleDeck = () => {
         for(let i = this.numberOfCards - 1; i > 0; i--) {
@@ -20,23 +19,25 @@ export class Deck {
             this.cards[i] = oldValue;
         }
     }
+
+    createDeck = () => {
+        let deck = [];
+        for(let i = 0; i < SUITS.length; i++) {
+            for(let j = 0; j < VALUES.length; j++) {
+                deck.push(new Card(SUITS[i], VALUES[j]));
+            }
+        }
+        return deck;
+    }
+
 }
+
 
 class Card {
     constructor(suit, value, visible) {
         this.suit = suit;
         this.value = value;
-        this.visible;
+        this.visibleSelf;
+        this.visibleOthers;
     }
-}
-
-
-let createDeck = () => {
-    let deck = [];
-    for(let i = 0; i < SUITS.length; i++) {
-        for(let j = 0; j < VALUES.length; j++) {
-            deck.push(new Card(VALUES[j], SUITS[i], true));
-        }
-    }
-    return deck;
 }
